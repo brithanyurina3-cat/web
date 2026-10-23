@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Autocuidado</title>
+<link rel="stylesheet" href="estilos.css">
+
+<style>
+body {
+    background-color: rgba(220, 206, 180, 0.711);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    line-height: 1.7;
+}
+
+nav {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+nav a {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+nav a:hover {
+    background-color: #e5f4f8;
+    border-radius: 8px;
+}
+
+p {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.65);
+    border-radius: 10px;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.opinion {
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 15px;
+    background-color: rgba(255,255,255,0.65);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.opinion textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.opinion button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4A90A4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#notificacion {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 20px;
+    border: 1px solid #a3d9ad;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+</style>
+</head>
+
+<body>
+
+<div id="notificacion">Respuesta guardada</div>
+
+<nav>
+    <a href="Proyecto.interdiciplinario.html">Inicio</a>
+    <a href="autocuidado.html">Autocuidado</a>
+    <a href="prevencion.html">Prevención</a>
+    <a href="derechos.html">Derechos y proyecto de vida</a>
+</nav>
+
+<h2>Autocuidado</h2>
+
+<p>
+El autocuidado consiste en realizar acciones que nos ayudan a proteger nuestra salud y nuestro bienestar. Para los jóvenes, significa aprender a conocer y respetar nuestro cuerpo, cuidar nuestras emociones, mantener buenos hábitos y reconocer cuándo necesitamos ayuda.<br>
+También significa establecer límites y saber que tenemos derecho a decir que no cuando algo nos incomoda o nos hace sentir inseguros.
+</p>
+
+<p>
+El autocuidado no solamente consiste en evitar enfermedades, sino también en cuidar nuestra autoestima, nuestra privacidad, nuestra tranquilidad y nuestra seguridad.
+</p>
+
+<p>
+UNICEF explica que hablar sobre la sexualidad ayuda a que los niños y jóvenes conozcan mejor su cuerpo, comprendan sus emociones y aprendan a relacionarse con los demás de manera respetuosa. Por eso, es importante tener personas adultas de confianza con quienes podamos hablar cuando tengamos dudas, preocupaciones o enfrentemos alguna situación difícil.
+</p>
+
+<img src="https://www.psicologiasexologiamallorca.com/wp-content/uploads/2025/08/tipos-de-autocuidado.jpg"
+alt="Tipos de autocuidado" style="width: 450px;">
+
+<p>
+Punto clave: Cuidarse significa conocer y respetar el propio cuerpo, reconocer nuestras emociones y pedir ayuda cuando sea necesario.<br><br>
+Dato importante: UNICEF indica que el aprendizaje sobre la sexualidad comienza desde el día en que nacemos, por lo que el autocuidado y el respeto del cuerpo pueden enseñarse progresivamente desde la infancia.
+</p>
+
+<div class="opinion">
+    <h3>¿Qué opinas acerca del autocuidado?</h3>
+
+    <textarea id="opinion" name="opinion" rows="5"
+    placeholder="Escribe tu mensaje aquí..."></textarea>
+
+    <br>
+
+    <button type="button" onclick="guardarRespuesta()">
+        Guardar respuesta
+    </button>
+</div>
+
+<script>
+function guardarRespuesta() {
+    const aviso = document.getElementById("notificacion");
+    aviso.style.display = "block";
+
+    setTimeout(function() {
+        aviso.style.display = "none";
+    }, 3000);
+}
+</script>
+
+</body>
+</html>
